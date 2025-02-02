@@ -166,3 +166,83 @@ h6 {
 	width: 54px;
 	height: 58px;
 }
+
+.header-slider {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+	border-bottom: 1px solid var(--color-dark);
+}
+
+.header-slider-image {
+	height: 100%;
+}
+
+.header-slider-sings {
+	display: flex;
+	align-items: center;
+	background: url("./img/slider-spot-phone.png") no-repeat;
+	background-size: cover;
+}
+
+.header-slider-sing {
+	position: relative;
+	font-family: var(--font-family-accent);
+	font-size: 120px;
+	line-height: 1.08;
+	text-transform: uppercase;
+	padding-left: 160px;
+}
+
+.header-slider-sing::before {
+	content: "";
+	width: 135px;
+	aspect-ratio: 1;
+	top: -110px;
+	right: -30px;
+	position: absolute;
+	background: url("./img/coffee-seal.png") no-repeat;
+}
+
+.header-slider-sing::after {
+	content: "";
+	width: 454px;
+	height: 141px;
+	bottom: -75px;
+	right: -200px;
+	position: absolute;
+	background: url("./img/with-love.png") no-repeat;
+}
+
+.header-slider-buttons button {
+	width: 84px;
+	height: 65px;
+	background-color: var(--color-yellow-bright);
+}
+
+.header-slider-button-previous {
+	position: absolute;
+	top: 50%;
+}
+
+.header-slider-button-next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+
+.header-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 60px;
+}
+
+.header-links-item {
+	color: var(--color-dark);
+	text-decoration: none;
+}
+
+.header-links-item:not(:last-child) {
+	padding-right: 29px;
+}
