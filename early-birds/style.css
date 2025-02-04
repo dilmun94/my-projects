@@ -44,6 +44,7 @@ body {
 
 .container {
 	max-width: var(--max-width);
+	margin: 0 auto;
 }
 
 h1,
@@ -52,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--color-dark-alternate);
+	font-family: var(--font-family-accent);
 }
 
 .button {
@@ -175,6 +176,7 @@ h6 {
 }
 
 .header-slider-image {
+	width: 100%;
 	height: 100%;
 }
 
@@ -188,30 +190,33 @@ h6 {
 .header-slider-sing {
 	position: relative;
 	font-family: var(--font-family-accent);
-	font-size: 120px;
+	font-size: clamp(60px, 6.25vw, 120px);
 	line-height: 1.08;
 	text-transform: uppercase;
 	padding-left: 160px;
+	background-color: aquamarine;
 }
 
 .header-slider-sing::before {
 	content: "";
-	width: 135px;
+	display: block;
+	width: clamp(65px, 7.03vw, 135px);
 	aspect-ratio: 1;
-	top: -110px;
-	right: -30px;
+	bottom: calc(100% - 25px);
+	left: calc(100% - 75px);
 	position: absolute;
-	background: url("./img/coffee-seal.png") no-repeat;
+	background: url("./img/coffee-seal.png") center/contain no-repeat;
 }
 
 .header-slider-sing::after {
 	content: "";
-	width: 454px;
-	height: 141px;
-	bottom: -75px;
-	right: -200px;
+	display: inline-block;
+	width: 453px;
+	aspect-ratio: 1;
+	top: 1.4em;
+	left: 2.1em;
 	position: absolute;
-	background: url("./img/with-love.png") no-repeat;
+	background: url("./img/with-love.png") center/contain no-repeat;
 }
 
 .header-slider-buttons button {
@@ -245,4 +250,42 @@ h6 {
 
 .header-links-item:not(:last-child) {
 	padding-right: 29px;
+}
+
+.shop-coffee {
+	display: grid;
+	grid-template-columns: 50% 25% 25%;
+	border-top: 1px solid var(--color-dark);
+	background-color: var(--color-yellow-dull);
+}
+
+.shop-coffee-topic {
+	text-align: left;
+	padding-top: 82px;
+	padding-left: 93px;
+}
+
+.shop-coffee-title {
+	font-family: var(--font-family-accent);
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.shop-coffee-paragraph {
+	line-height: 1.33;
+}
+
+.shop-coffee-link {
+	color: var(--color-dark);
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.shop-coffee-card {
+	padding-left: 43px;
+	border: 1px solid var(--color-dark);
 }
